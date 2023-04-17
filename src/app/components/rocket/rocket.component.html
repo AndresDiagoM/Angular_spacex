@@ -1,6 +1,7 @@
 <div class="mdl-card stock-card mdl-shadow--2dp" [ngClass]="{increase:isPositive(), decrease:isNegative()}">
     <div class="mdl-card__title">
         <div class="mdl-grid">
+
             <div class="mdl-cell mdl-cell--12-col">
                 <h4 style="color: #FFF; margin: 0">{{rocket.name}}</h4>
             </div>
@@ -17,5 +18,7 @@
                 <a class="mdl-navigation__link" [routerLink]="['/manage',rocket.id]">Editar</a>
                 <input type="button" value="Borrar" (click)="remove(rocket.id)"/>
             </div>
+
+        </div>
     </div>
 </div>
