@@ -1,0 +1,13 @@
+<div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--4-col"></div>
+    <div class="mdl-cell mdl-cell--4-col">
+        <form style="margin-bottom: 4px;" (submit)="add()" method="post">
+            <input type="number" [(ngModel)]="rocket.id" name="id" class="mdl-textfield__input" placeholder="Id">
+            <input type="text" [(ngModel)]="rocket.name" required name="name" maxlength="100" class="mdl-textfield__input" placeholder="Name">
+            <input type="text" [(ngModel)]="rocket.description" name="description" maxlength="250" class="mdl-textfield__input" placeholder="Description">
+            <input type="number" [(ngModel)]="rocket.height" name="height" class="mdl-textfield__input" placeholder="Height">
+            <input type="text" [(ngModel)]="rocket.country" name="country" maxlength="80" class="mdl-textfield__input" placeholder="Country">
+            <input type="text" [(ngModel)]="rocket.flickr_images[0]" name="image" maxlength="180" class="mdl-textfield__input" placeholder="Image">
+            <input type="submit" value="Guardar">
+        </form>
+</div>

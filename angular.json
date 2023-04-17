@@ -64,11 +64,13 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "spacex:build:production"
+              "browserTarget": "spacex:build:production",
+              "proxyConfig": "src/proxy.conf.json"
             },
             "development": {
-              "browserTarget": "spacex:build:development"
-            }
+              "browserTarget": "spacex:build:development",
+              "proxyConfig": "src/proxy.conf.json"
+            },
           },
           "defaultConfiguration": "development"
         },
