@@ -1,13 +1,40 @@
-<div class="mdl-grid">
+<div class="mdl-card stock-card mdl-shadow--2dp">
+  <div class="mdl-grid">
     <div class="mdl-cell mdl-cell--4-col"></div>
-    <div class="mdl-cell mdl-cell--4-col">
-        <form style="margin-bottom: 4px;" (submit)="add()" method="post">
-            <input type="number" [(ngModel)]="rocket.id" name="id" class="mdl-textfield__input" placeholder="Id">
-            <input type="text" [(ngModel)]="rocket.name" required name="name" maxlength="100" class="mdl-textfield__input" placeholder="Name">
-            <input type="text" [(ngModel)]="rocket.description" name="description" maxlength="250" class="mdl-textfield__input" placeholder="Description">
-            <input type="number" [(ngModel)]="rocket.height" name="height" class="mdl-textfield__input" placeholder="Height">
-            <input type="text" [(ngModel)]="rocket.country" name="country" maxlength="80" class="mdl-textfield__input" placeholder="Country">
-            <input type="text" [(ngModel)]="rocket.flickr_images[0]" name="image" maxlength="180" class="mdl-textfield__input" placeholder="Image">
-            <input type="submit" value="Guardar">
-        </form>
+    <div class="mdl-cell mdl-cell--10-col">
+      <form style="margin-bottom: 4px;" (submit)="add()" method="post">
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <input type="number" [(ngModel)]="rocket.id" name="id" class="mdl-textfield__input" placeholder="Id">
+          <label class="mdl-textfield__label" for="id">Id</label>
+        </div>
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <input type="text" [(ngModel)]="rocket.name" required name="name" maxlength="100" class="mdl-textfield__input" placeholder="Name">
+          <label class="mdl-textfield__label" for="name">Name</label>
+        </div>
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <input type="text" [(ngModel)]="rocket.description" name="description" maxlength="250" class="mdl-textfield__input" placeholder="Description">
+          <label class="mdl-textfield__label" for="description">Description</label>
+        </div>
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <input type="number" [(ngModel)]="rocket.height" name="height" class="mdl-textfield__input" placeholder="Height">
+          <label class="mdl-textfield__label" for="height">Height</label>
+        </div>
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <input type="text" [(ngModel)]="rocket.country" name="country" maxlength="80" class="mdl-textfield__input" placeholder="Country">
+          <label class="mdl-textfield__label" for="country">Country</label>
+        </div>
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <input type="text" [(ngModel)]="rocket.flickr_images[0]" name="image" maxlength="180" class="mdl-textfield__input" placeholder="Image">
+          <label class="mdl-textfield__label" for="image">Image</label>
+        </div>
+        <img src="{{rocket.flickr_images[0]}}" width="250" alt="{{rocket.name}}"/>
+
+        <div class="mdl-card__actions">
+          <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+            Guardar
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
 </div>

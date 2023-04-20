@@ -22,8 +22,9 @@ export class ManageComponent implements OnInit {
   constructor(private service: RocketService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.route.queryParams.subscribe(params => {
+    this.route.params.subscribe(params => {
       this.rocketid = params['id'];
+      console.log(this.rocketid)
     });
     if (this.rocketid > 0) {
       this.service.edit(this.rocketid)?.subscribe(rocket => this.rocket = rocket);
