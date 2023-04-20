@@ -22,6 +22,8 @@ export class RocketComponent implements OnInit {
   }
 
   editar(id: number) {
+    this.service.edit(id);
+    return this.service.get();
   }
 
   isPositive() {

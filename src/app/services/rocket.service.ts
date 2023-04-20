@@ -42,4 +42,6 @@ export class RocketService {
   edit(rocketid: number) {
     return this.http.get<RocketInterface>(service+'/'+rocketid);
   }
+  //Parcialmente implementada la opcion de editar. Carga los datos en el
+  //componente "manage" usando el paso de datos por url tradicional. Ejemplo: http://localhost:4200/manage=id=1
 }

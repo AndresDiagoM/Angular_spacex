@@ -16,7 +16,8 @@ export class ManageComponent implements OnInit {
     description: '',
     height: 0,
     country: '',
-    flickr_images: []};
+    flickr_images: []
+  };
 
   constructor(private service: RocketService, private route: ActivatedRoute) { }
 
